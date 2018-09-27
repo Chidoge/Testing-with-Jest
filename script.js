@@ -19,4 +19,30 @@ const googleSearch = (searchInput, db) => {
 
 } 
 
-module.exports = googleSearch;
+
+const calculator = (a, b, op) => {
+
+	if (a == 0 || b == 0) {
+
+	}
+	else if (!a || !b) {
+		return 'Invalid operand';
+	}
+	
+	switch(op) {
+		case '+' :
+			return a + b;
+		case '-' : 
+			return a - b;
+		case '*' : 
+			return a * b;
+		case '/' :
+			return a / b;
+		default :
+			return 'Invalid operator';
+	}
+}
+module.exports = {
+	googleSearch : googleSearch,
+	calculator : calculator
+};
